@@ -118,7 +118,7 @@ The parameter gives a valid converse rather than a complete characterization of 
 Fixing $`r`$ and a complete transcript $`t`$ gives an unnormalized output state $`\sigma_{t|r}`$ after helpers and other retained registers have been traced out. Write
 
 ```math
-p_{t|r}=\operatorname{Tr}\sigma_{t|r},
+p_{t|r}=\mathrm{Tr}\sigma_{t|r},
 \qquad
 \sum_t p_{t|r}=1,
 \qquad

@@ -21,7 +21,7 @@ w_u+w_v\le1\ (\{u,v\}\in E)
 For a complete transcript $`t`$ and fixed seed $`r`$, let $`\sigma_{t|r}`$ denote its unnormalized output, and put
 
 ```math
-p_{t|r}=\operatorname{Tr}\sigma_{t|r},
+p_{t|r}=\mathrm{Tr}\sigma_{t|r},
 \qquad
 \rho^{(r)}=\sum_t\sigma_{t|r},
 \qquad
@@ -52,7 +52,7 @@ F_2
 1,\,
 \frac12+M\,2^{-\alpha}
 \right\}.
-\tag{C1}
+\qquad\text{(C1)}
 ```
 
 No condition $`\alpha\ge2`$ is required.
@@ -84,7 +84,7 @@ F_d
 1,\,
 \frac{M^{1/(\alpha-1)}}d
 \right\}.
-\tag{C2}
+\qquad\text{(C2)}
 ```
 
 **Proof for $`\alpha>2`$.** Fix $`r`$, discard zero-probability leaves, and let their remaining number be $`m_r\le M`$. Put
@@ -142,7 +142,7 @@ F_2
 \frac12+M2^{-\alpha},\,
 \frac12M^{1/(\alpha-1)}
 \right\}.
-\tag{C3}
+\qquad\text{(C3)}
 ```
 
 They control different features. The coherence estimate gives the stronger party-number dependence at a fixed nonzero advantage above $`1/2`$ when $`\alpha`$ is large. The dimension-dependent estimate retains the total branch probability and controls large targets.
@@ -160,7 +160,7 @@ F_2
 1,\,
 \frac12+2^{\,c-\alpha}
 \right\}.
-\tag{C4}
+\qquad\text{(C4)}
 ```
 
 If $`\alpha\ge2`$, then
@@ -172,7 +172,7 @@ F_d
 1,\,
 2^{\,c/(\alpha-1)-\log_2 d}
 \right\}.
-\tag{C5}
+\qquad\text{(C5)}
 ```
 
 Consequently, an achieved qubit fidelity $`F_2>1/2`$ requires
@@ -180,7 +180,7 @@ Consequently, an achieved qubit fidelity $`F_2>1/2`$ requires
 ```math
 c\ge
 \alpha+\log_2\!\left(F_2-\frac12\right).
-\tag{C6}
+\qquad\text{(C6)}
 ```
 
 For $`\alpha\ge2`$ and $`F_d>0`$, the general target requires
@@ -188,7 +188,7 @@ For $`\alpha\ge2`$ and $`F_d>0`$, the general target requires
 ```math
 c\ge
 (\alpha-1)\log_2(dF_d).
-\tag{C7}
+\qquad\text{(C7)}
 ```
 
 These real-valued lower bounds are combined with $`c\ge0`$ and, when appropriate, rounded upward because the worst-case bit budget is an integer.
@@ -203,7 +203,7 @@ The feasible output weights depend only on edges joining two output vertices. In
 
 ```math
 \alpha_O(G)=\alpha^*(G[O]),
-\tag{C8}
+\qquad\text{(C8)}
 ```
 
 where $`G[O]`$ is the graph induced by the output vertices.
@@ -212,7 +212,7 @@ In particular, assigning $`w_i=1/2`$ to every output and zero to every helper is
 
 ```math
 \alpha_O(G)\ge\frac n2.
-\tag{C9}
+\qquad\text{(C9)}
 ```
 
 The bounds consequently hold uniformly over any finite number of helpers and any independent pair sources attached to them. All helper communication is included in the transcript. The model begins with the independent edge resources; multipartite states created by earlier helper operations cannot be inserted as free initial resources.
@@ -225,14 +225,14 @@ F_2\le
 1,\,
 \frac12+2^{\,c-n/2}
 \right\}.
-\tag{C10}
+\qquad\text{(C10)}
 ```
 
 Thus every fixed $`\delta>0`$ and achieved fidelity $`F_2\ge1/2+\delta`$ require
 
 ```math
 c\ge\frac n2+\log_2\delta.
-\tag{C11}
+\qquad\text{(C11)}
 ```
 
 For $`n\ge4`$, the dimension-dependent universal bound is
@@ -244,7 +244,7 @@ F_d
 1,\,
 \frac{2^{\,2c/(n-2)}}d
 \right\}.
-\tag{C12}
+\qquad\text{(C12)}
 ```
 
 These statements allow all output pairs to share arbitrarily large entangled states. Adding independent pairwise entanglement cannot eliminate the extensive classical bit requirement.
@@ -261,7 +261,7 @@ Suppose each output party has $`k`$ target qubits. Regroup its $`k`$ computation
 \frac1{\sqrt{2^k}}
 \sum_{x\in\{0,1\}^k}|x\rangle^{\otimes n}
 =|\mathrm{GHZ}_{n,2^k}\rangle.
-\tag{C13}
+\qquad\text{(C13)}
 ```
 
 No operation between parties is needed for this identification.
@@ -287,7 +287,7 @@ F_k
 1,\,
 2^{\,c_k/(\alpha-1)-k}
 \right\}.
-\tag{C14}
+\qquad\text{(C14)}
 ```
 
 In particular, if $`c_k\le R_{\mathrm{bit}}k`$ for some fixed $`R_{\mathrm{bit}}<\alpha-1`$, then
@@ -296,7 +296,7 @@ In particular, if $`c_k\le R_{\mathrm{bit}}k`$ for some fixed $`R_{\mathrm{bit}}
 F_k
 \le
 2^{-k[1-R_{\mathrm{bit}}/(\alpha-1)]}.
-\tag{C15}
+\qquad\text{(C15)}
 ```
 
 The global fidelity therefore vanishes exponentially below $`\alpha-1`$ communicated bits per target GHZ copy. The same conclusion holds when $`\limsup_{k\to\infty}c_k/k<\alpha-1`$, by choosing an eventual strict upper bound $`R_{\mathrm{bit}}`$ on that ratio.
@@ -313,7 +313,7 @@ F_k\le
 1,\,
 2^{\,2c_k/(n-2)-k}
 \right\}.
-\tag{C16}
+\qquad\text{(C16)}
 ```
 
 For a star whose center is one of its $`n\ge3`$ output vertices, $`\alpha=n-1`$. The threshold in (C14) is then $`n-2`$ bits per GHZ copy, attained by the [star fusion construction](achievability-and-limits.md). The same exact threshold applies to block protocols: coherent processing of many copies cannot lower it in the regime of nonvanishing global fidelity.

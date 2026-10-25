@@ -221,7 +221,7 @@ The allocation gives more space to the narrative because the project connects tw
 
 **Central question:** Why does a small amount of branchwise coherence limit the fidelity of a qubit GHZ output?
 
-**Understanding target:** Connect the two GHZ basis populations to the off-diagonal matrix element through positivity. Explain the bound $`|\sigma[0^n,1^n]|\le2^{-\alpha}`$ and the resulting unnormalized fidelity contribution $`g\le p/2+2^{-\alpha}`$, where $`p=\operatorname{Tr}\sigma`$.
+**Understanding target:** Connect the two GHZ basis populations to the off-diagonal matrix element through positivity. Explain the bound $`|\sigma[0^n,1^n]|\le2^{-\alpha}`$ and the resulting unnormalized fidelity contribution $`g\le p/2+2^{-\alpha}`$, where $`p=\mathrm{Tr}\sigma`$.
 
 **Dependencies and story role:** M02, M08, M10 and M15. This is the first conversion of the network constraint into a quantum-quality bound.
 
