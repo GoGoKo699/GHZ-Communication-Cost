@@ -12,7 +12,7 @@ Therefore
 
 ```math
 p_{t|r}\le d^{\,1-\alpha}.
-\tag{E1}
+\qquad\text{(E1)}
 ```
 
 This argument only requires $`\alpha\ge1`$. It does not need the stronger restriction $`\alpha\ge2`$ used for the approximate dimension-dependent fidelity theorem.
@@ -38,7 +38,7 @@ Averaging over the free seed proves the exact mean-cost converse
 
 ```math
 L\ge H(T|R)\ge(\alpha-1)\log d.
-\tag{E2}
+\qquad\text{(E2)}
 ```
 
 The statement concerns actual prefix-free communication, including termination. It does not charge the already available shared seed.
@@ -69,7 +69,7 @@ F\le
 \min\left\{
 1,\frac12+2^{b-\alpha}+\frac{L}{2b}
 \right\}.
-\tag{E3}
+\qquad\text{(E3)}
 ```
 
 Equivalently,
@@ -78,14 +78,14 @@ Equivalently,
 L\ge
 2b\left[F-\frac12-2^{b-\alpha}\right]_+,
 \qquad [x]_+=\max\{x,0\}.
-\tag{E4}
+\qquad\text{(E4)}
 ```
 
 For fixed $`F>1/2`$ and $`\alpha\to\infty`$, choose $`b=\lfloor\alpha-\log_2\alpha\rfloor`$ once it is positive. Then $`2^{b-\alpha}\le1/\alpha`$, and
 
 ```math
 L\ge(2F-1)\alpha-O(\log\alpha).
-\tag{E5}
+\qquad\text{(E5)}
 ```
 
 Since $`\alpha\ge n/2`$, even **expected** communication must grow linearly with the number of outputs at fixed fidelity above one half. This conclusion permits rare long executions; it is not obtained by replacing the worst-case budget by its expectation in the fixed-budget theorem.
@@ -125,7 +125,7 @@ The last line is Jensen's inequality for the convex function $`u\mapsto u\log(du
 
 ```math
 L\ge(\alpha-1)\,[F\log(dF)]_+.
-\tag{E6}
+\qquad\text{(E6)}
 ```
 
 For a fixed required fidelity $`f\ge1/d`$, the right side is increasing for actual fidelities $`F\ge f`$, so it also bounds protocols whose fidelity is at least $`f`$.
@@ -141,7 +141,7 @@ Here $`\alpha=n-1`$. Equation (E6) gives
 ```math
 L_k^*(f)
 \ge(n-2)\,[f(k+\log f)]_+.
-\tag{E7}
+\qquad\text{(E7)}
 ```
 
 For $`f\ge2^{-k}`$, the following construction gives a matching leading term. Use the free shared seed to choose between:
@@ -161,14 +161,14 @@ The average fidelity is exactly $`f`$ and the mean cost is $`q(n-2)k`$. Hence
 L_k^*(f)
 \le(n-2)k\,\frac{f-2^{-k}}{1-2^{-k}}
 \quad(f\ge2^{-k}).
-\tag{E8}
+\qquad\text{(E8)}
 ```
 
 For $`f\le2^{-k}`$, the product output already meets the requirement at zero cost. For every fixed $`n\ge3`$ and $`f\in(0,1]`$, (E7) and (E8) imply the exact asymptotic frontier
 
 ```math
 \lim_{k\to\infty}\frac{L_k^*(f)}k=(n-2)f.
-\tag{E9}
+\qquad\text{(E9)}
 ```
 
 The same star construction also makes (E5) sharp to leading order in the **number of parties** for one qubit GHZ at fixed $`f>1/2`$: mix exact fusion with the product output using probability $`q=2f-1`$. Its mean cost is $`(2f-1)(n-2)`$.
@@ -202,7 +202,7 @@ At $`\alpha=2`$, count only nonzero accepted leaves; the same inequality follows
 ```math
 P(dF_{\mathrm{acc}})^{\alpha-1}
 \le M_{\mathrm{acc}}.
-\tag{E10}
+\qquad\text{(E10)}
 ```
 
 For a qubit target, the complementary coherence estimate is
@@ -210,7 +210,7 @@ For a qubit target, the complementary coherence estimate is
 ```math
 P\left(F_{\mathrm{acc}}-\frac12\right)
 \le M_{\mathrm{acc}}2^{-\alpha}.
-\tag{E11}
+\qquad\text{(E11)}
 ```
 
 These are success-probability bounds for an explicit collection of complete transcripts. A physically useful herald must be available to the required parties. Communicating a global acceptance decision belongs to the protocol and is charged; selecting on a hidden collection of distant private outcomes is not a free implementation.

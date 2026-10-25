@@ -44,7 +44,7 @@ F=\langle\psi|\rho|\psi\rangle=F_{\rm W}^{\,2}.
 The linear quantity $`F`$ is what can be summed over unnormalized branches. If an instrument produces $`\sigma_t`$ with trace $`p_t`$, then
 
 ```math
-p_t=\operatorname{Tr}\sigma_t,
+p_t=\mathrm{Tr}\sigma_t,
 \qquad
 f_t=\frac{\langle\psi|\sigma_t|\psi\rangle}{p_t}
 \quad(p_t>0),

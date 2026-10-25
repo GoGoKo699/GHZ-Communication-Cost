@@ -21,7 +21,7 @@ All arithmetic on basis labels is modulo $`d`$. Write $`X_d|x\rangle=|x+1\rangle
 \sum_{x_1,\ldots,x_m}
 |x_1,\ldots,x_m\rangle_C
 \bigotimes_{j=1}^{m}|x_j\rangle_{L_j}.
-\tag{A1}
+\qquad\text{(A1)}
 ```
 
 The hub retains $`C_1`$. For every $`j\ge2`$, it applies controlled subtraction
@@ -39,14 +39,14 @@ then measures $`C_j`$ in the computational basis. Denote the result by $`s_j=x_j
 =d^{-m/2}\sum_{x=0}^{d-1}
 |x\rangle_C|x\rangle_{L_1}
 \bigotimes_{j=2}^{m}|x+s_j\rangle_{L_j}.
-\tag{A2}
+\qquad\text{(A2)}
 ```
 
 Every syndrome has probability
 
 ```math
 p_s=d^{1-m}=d^{-(n-2)}.
-\tag{A3}
+\qquad\text{(A3)}
 ```
 
 After learning $`s_j`$, leaf $`L_j`$ applies $`X_d^{-s_j}`$. No correction is needed at $`C`$ or $`L_1`$. Every corrected branch is therefore
@@ -54,7 +54,7 @@ After learning $`s_j`$, leaf $`L_j`$ applies $`X_d^{-s_j}`$. No correction is ne
 ```math
 |\psi_s^{\mathrm{corr}}\rangle
 =\sqrt{p_s}\,|\mathrm{GHZ}_{n,d}\rangle.
-\tag{A4}
+\qquad\text{(A4)}
 ```
 
 For qubits, controlled subtraction is CNOT. The three-party, one-bit fusion primitive is established in [Grudka et al.](../references/related-work.md#grudka2008); equations (A1)–(A4) give the explicit repeated-fusion construction and its dimension dependence.
@@ -66,7 +66,7 @@ There are exactly $`d^{n-2}`$ equiprobable syndrome words. At the level of messa
 ```math
 c_{\mathrm{star}}^{\mathrm{exact}}
 =\left\lceil(n-2)\log_2d\right\rceil.
-\tag{A5}
+\qquad\text{(A5)}
 ```
 
 Every party receives this word on the public board and extracts its required correction. For the source star, $`\alpha=n-1`$. The [exact-branch converse](branch-bound.md#coherence-and-fidelity-of-one-branch) gives $`M\ge d^{n-2}`$, hence the matching binary lower bound in (A5), even when arbitrary larger pair states and more general LOCC protocols are allowed on the same star.
@@ -81,7 +81,7 @@ Measuring a syndrome does not itself communicate it. If the hub sends only some 
 
 ```math
 F=d^{-r}.
-\tag{A6}
+\qquad\text{(A6)}
 ```
 
 This is an explicit example in which the number of local measurement histories exceeds the number of communicated transcripts. The [fixed-transcript CP-map representation](branch-bound.md#factorization-of-a-fixed-transcript) sums the private histories inside the hub's local map.
@@ -100,7 +100,7 @@ with
 ```math
 F(\rho_{\mathrm{flag}})
 =p_0+\frac{1-p_0}{d}.
-\tag{A7}
+\qquad\text{(A7)}
 ```
 
 Only two communicated transcripts are needed, although the hub has $`d^{n-2}`$ possible private syndromes. The exact conditional success does not imply deterministic exact preparation. The success probability is the quantity retained by the [heralded bounds](expected-and-heralded.md).
@@ -114,7 +114,7 @@ Vertex $`v`$ applies controlled subtraction from its current GHZ output into $`a
 ```math
 \frac1{\sqrt d}\sum_{x=0}^{d-1}
 |x\rangle^{\otimes |S|}|x+s\rangle_w.
-\tag{A8}
+\qquad\text{(A8)}
 ```
 
 Sending $`s`$ to $`w`$ and applying $`X_d^{-s}`$ extends the GHZ state by one vertex. All existing outputs remain unchanged. Each outcome is uniform over $`d`$ values, conditional on the preceding outcomes. Repeating this step adds the remaining $`n-2`$ vertices.
@@ -136,7 +136,7 @@ For quantum systems $`B_1,\ldots,B_m`$ and a classical record $`T`$, define cond
 ```math
 J(B_1:\cdots:B_m\mid T)
 =\sum_{j=1}^{m}S(B_j\mid T)-S(B_1\cdots B_m\mid T).
-\tag{A9}
+\qquad\text{(A9)}
 ```
 
 For each fixed value of $`T`$, total correlation is the relative entropy
@@ -167,7 +167,7 @@ Expanding the conditional entropies yields the identity
 J(B_1:\cdots:B_k':\cdots:B_m\mid TX)
 +\sum_{j\ne k}I(X:B_j\mid T).
 \end{aligned}
-\tag{A10}
+\qquad\text{(A10)}
 ```
 
 Every mutual information on the right is nonnegative. Thus the conditional total correlation cannot increase when a component performs a local instrument and publishes its result. Subsequent local corrections, conditioned on the public record, cannot increase it either.
@@ -183,7 +183,7 @@ I(X:B_1\cdots B_m\mid T)
 -\sum_j I(X:B_j\mid T)\\
 &\quad\le H(X\mid T).
 \end{aligned}
-\tag{A11}
+\qquad\text{(A11)}
 ```
 
 The last step uses $`I(X:B_1\cdots B_m\mid T)\le H(X\mid T)`$ for a classical $`X`$. In particular, one publicly transmitted binary symbol increases (A9) by at most one bit. Unannounced local operations at the outside party leave the reduced component state unchanged.
@@ -198,7 +198,7 @@ These statements apply separately at each node of an adaptive public protocol tr
 L_v\ge[\deg_{\mathcal T}(v)-1]\log_2d,
 \qquad
 \sum_vL_v\ge(n-2)\log_2d.
-\tag{A12}
+\qquad\text{(A12)}
 ```
 
 For $`d=2^k`$, sequential growth attains equality. The optimum exact worst-case and expected binary costs are therefore both $`k(n-2)`$.
@@ -209,7 +209,7 @@ Every message from a vertex other than $`v`$ is produced inside one of the compo
 
 ```math
 J(B_1:\cdots:B_m\mid RT_{\mathrm{final}})\le L_v.
-\tag{A13}
+\qquad\text{(A13)}
 ```
 
 Because the unconditional output is the pure GHZ target, every positive-probability transcript has that same target output for almost every shared seed. Trace out all extra registers locally and trace out the output at $`v`$. On the component outputs this leaves
@@ -219,7 +219,7 @@ Because the unconditional output is the pure GHZ target, every positive-probabil
 =\frac1d\sum_{x=0}^{d-1}
 \bigotimes_{j=1}^{m}
 \left(|x\rangle\langle x|\right)^{\otimes |B_j^{\mathrm{out}}|}.
-\tag{A14}
+\qquad\text{(A14)}
 ```
 
 Each component is nonempty. Its marginal entropy is $`\log_2d`$, while the joint entropy of (A14) is $`\log_2d`$. The total correlation of the reduced output is therefore $`(m-1)\log_2d`$. Local data processing implies that the left side of (A13) is at least this value. This proves the vertex bound. Summing it and using $`\sum_v\deg_{\mathcal T}(v)=2(n-1)`$ gives the total bound in (A12). The matching construction was given above. ∎
@@ -242,7 +242,7 @@ Conditional on result $`r`$, the leaf state is
 
 ```math
 \frac1{\sqrt d}\sum_{x=0}^{d-1}\omega^{-rx}|x\rangle^{\otimes N}.
-\tag{A15}
+\qquad\text{(A15)}
 ```
 
 One designated leaf applies $`Z_d^r`$, where $`Z_d|x\rangle=\omega^x|x\rangle`$, after the hub communicates $`r`$. This construction uses $`N`$ symbols, or exactly $`N\log_2d`$ binary bits when $`d`$ is a power of two. The extra phase symbol is absent when the hub remains one of the outputs.
@@ -251,7 +251,7 @@ One designated leaf applies $`Z_d^r`$, where $`Z_d|x\rangle=\omega^x|x\rangle`$,
 
 ```math
 L_C\ge N\log_2d.
-\tag{A16}
+\qquad\text{(A16)}
 ```
 
 This holds for arbitrary interaction and for finite or almost-surely terminating protocols of finite mean length. In particular, for $`d=2^k`$, the optimum total exact communication cost, in either the worst-case or mean model, is $`Nk`$ bits. The construction above attains it using messages from the hub alone.
@@ -286,7 +286,7 @@ Use the free shared seed to run an exact protocol with probability $`q`$, and ot
 L=q\,c_{\mathrm{exact}},
 \qquad
 F=q+\frac{1-q}{d}.
-\tag{A17}
+\qquad\text{(A17)}
 ```
 
 On a retained-hub star preparing $`k`$ qubit GHZ copies, take $`d=2^k`$ and $`c_{\mathrm{exact}}=k(n-2)`$. For fixed $`q>0`$, its global fidelity tends to $`q`$, while its expected cost per copy is $`q(n-2)`$. This disproves transferring the worst-case strong-converse threshold to mean cost by simply replacing the maximum length with an expectation. It does not contradict the separate expected-cost lower bounds at fixed fidelity in [Expected communication and heralding](expected-and-heralded.md).
@@ -315,7 +315,7 @@ For the complete graph on $`n\ge4`$ output parties, the established exact qubit 
 \left\lceil\frac n2-1\right\rceil
 \le c_{\mathrm{exact}}(K_n)
 \le n-2.
-\tag{A18}
+\qquad\text{(A18)}
 ```
 
 The lower bound comes from fractional independence, and the upper bound from using a spanning tree. The tree entropy proof cannot be applied after ignoring available extra source edges in a lower-bound argument. The optimal dense-graph coefficient and a possible improvement over the spanning-tree construction are not settled by these results.

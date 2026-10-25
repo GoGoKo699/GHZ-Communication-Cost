@@ -31,18 +31,18 @@ The optimized value is $`\alpha_O(G)=\max_{w\in\mathcal W_O(G)}\sum_v w_v`$. The
 be an independent bipartite-source state, with independent local ancillas also allowed. For local effects $`0\le A_v\le I`$, define
 
 ```math
-P=\operatorname{Tr}\!\left[
+P=\mathrm{Tr}\!\left[
 \left(\bigotimes_{v\in V}A_v\right)\omega
 \right],
 \qquad
-P_v=\operatorname{Tr}(A_v\omega_v).
+P_v=\mathrm{Tr}(A_v\omega_v).
 ```
 
 Here $`\omega_v`$ is the reduced input state at vertex $`v`$, including its local ancilla. For every $`w\in[0,1]^V`$ satisfying $`w_u+w_v\le1`$ on each edge,
 
 ```math
 P\le\prod_{v:w_v>0}P_v^{\,w_v}.
-\tag{B1}
+\qquad\text{(B1)}
 ```
 
 This is the inherited quantum network Finner inequality of [Renou et al.](../references/related-work.md#ren2019). We give a proof with absolute values in the tensor contraction, so complex matrix elements cause no restriction. The only classical analytic input is [Finner's inequality](../references/related-work.md#finner1992) in the finite counting-measure form
@@ -57,7 +57,7 @@ This is the inherited quantum network Finner inequality of [Renou et al.](../ref
 g_v((z_e)_{e\ni v})^2
 \right)^{1/2},
 \qquad g_v\ge0.
-\tag{B2}
+\qquad\text{(B2)}
 ```
 
 Each edge variable appears in exactly two functions. This is the all-half-weight case of classical Finner; it holds for finite product counting measures as well as probability measures. Normalizing each counting measure gives the same formula, because each normalization factor occurs twice with exponent $`1/2`$ on the right.
@@ -69,7 +69,7 @@ An independent local ancilla with state $`\eta_v`$ can be absorbed into the effe
 ```math
 \widetilde A_v
 =
-\operatorname{Tr}_{L_v}
+\mathrm{Tr}_{L_v}
 \left[
 (I\otimes\eta_v^{1/2})A_v
 (I\otimes\eta_v^{1/2})
@@ -130,7 +130,7 @@ P
 |\langle\mathbf b|A_v|\mathbf a\rangle|^2
 \sqrt{r_v(\mathbf a)r_v(\mathbf b)}
 \right]^{1/2}.
-\tag{B3}
+\qquad\text{(B3)}
 ```
 
 For each vertex, the arithmetic–geometric mean inequality and Hermiticity of $`A_v`$ give
@@ -145,9 +145,9 @@ For each vertex, the arithmetic–geometric mean inequality and Hermiticity of $
 |(A_v)_{\mathbf b\mathbf a}|^2
 [r_v(\mathbf a)+r_v(\mathbf b)]\\
 &=
-\operatorname{Tr}(\omega_v A_v^2)\\
+\mathrm{Tr}(\omega_v A_v^2)\\
 &\le
-\operatorname{Tr}(\omega_v A_v)
+\mathrm{Tr}(\omega_v A_v)
 =P_v.
 \end{aligned}
 ```
@@ -156,7 +156,7 @@ The final inequality uses $`A_v^2\le A_v`$, which follows from $`0\le A_v\le I`$
 
 ```math
 P\le\prod_{v\in V}P_v^{1/2}.
-\tag{B4}
+\qquad\text{(B4)}
 ```
 
 This argument includes isolated vertices: their tensors have no edge indices, and the same scalar estimate applies.
@@ -200,7 +200,7 @@ with independent local ancillas understood. For a complete communication transcr
 =
 \left(\bigotimes_{v\in V}\Lambda_{v,t|r}\right)
 \left(\omega^{(r)}\right).
-\tag{B5}
+\qquad\text{(B5)}
 ```
 
 At an output vertex, the map retains its designated $`d`$-dimensional output. At a helper, its quantum output can be traced out, so its map takes values in the scalars. Local environments and unreported classical records may also be discarded inside these maps.
@@ -240,7 +240,7 @@ The scheduling and stopping conventions in the [model](model.md) are necessary h
 
 ## The diagonal mass constraint
 
-Fix $`r,t`$ and abbreviate $`\sigma=\sigma_{t|r}`$ and $`p=\operatorname{Tr}\sigma`$. For $`x\in\{0,\ldots,d-1\}`$, write
+Fix $`r,t`$ and abbreviate $`\sigma=\sigma_{t|r}`$ and $`p=\mathrm{Tr}\sigma`$. For $`x\in\{0,\ldots,d-1\}`$, write
 
 ```math
 |x^O\rangle=\bigotimes_{i\in O}|x\rangle_i,
@@ -252,7 +252,7 @@ q_x=\langle x^O|\sigma|x^O\rangle.
 
 ```math
 \sum_{x=0}^{d-1}q_x^{1/\alpha}\le1.
-\tag{B6}
+\qquad\text{(B6)}
 ```
 
 **Proof.** Define local input effects at output vertices by
@@ -274,14 +274,14 @@ A_i(x)\ge0,\qquad
 Let
 
 ```math
-u_i(x)=\operatorname{Tr}[A_i(x)\omega_i^{(r)}].
+u_i(x)=\mathrm{Tr}[A_i(x)\omega_i^{(r)}].
 ```
 
 Then $`\sum_xu_i(x)\le1`$. Equation (B5) identifies $`q_x`$ with the joint event consisting of local transcript success and output $`x`$ at every output vertex, together with transcript success at every helper. Theorem B1, with all helper weights zero, gives
 
 ```math
 q_x\le\prod_{i\in O:w_i>0}u_i(x)^{w_i}.
-\tag{B7}
+\qquad\text{(B7)}
 ```
 
 Set $`\theta_i=w_i/\alpha`$ for the positive-weight vertices. These numbers sum to one. Weighted Hölder gives
@@ -325,7 +325,7 @@ For an unnormalized branch, $`\Phi_d(\sigma)`$ includes its occurrence probabili
 \le 2^{-\alpha},
 \qquad
 \Phi_2(\sigma)\le\frac p2+2^{-\alpha}.
-\tag{B8}
+\qquad\text{(B8)}
 ```
 
 **Proof.** Positivity of the $`2\times2`$ principal submatrix and (B7) imply
@@ -350,7 +350,7 @@ Also $`q_0+q_1\le p`$, so
 \Phi_2(\sigma)
 =
 \frac{q_0+q_1}{2}
-+\operatorname{Re}\langle0^O|\sigma|1^O\rangle
++\mathrm{Re}\langle0^O|\sigma|1^O\rangle
 \le\frac p2+2^{-\alpha}.
 ```
 
@@ -362,7 +362,7 @@ This proof does not require $`\alpha\ge2`$. ∎
 \Phi_d(\sigma)
 \le
 \frac1d\,p^{\,(\alpha-2)/(\alpha-1)}.
-\tag{B9}
+\qquad\text{(B9)}
 ```
 
 The zero-probability branch has $`\Phi_d(\sigma)=0`$ and is treated separately when $`\alpha=2`$.
@@ -381,7 +381,7 @@ Consequently,
 \le
 \frac1d
 \left(\sum_x\sqrt{q_x}\right)^2.
-\tag{B10}
+\qquad\text{(B10)}
 ```
 
 For $`\alpha>2`$, put
@@ -404,7 +404,7 @@ $`\sqrt{q_x}=(q_x^{1/\alpha})^a q_x^b`$, yields
 &\le
 p^{(\alpha-2)/(\alpha-1)}.
 \end{aligned}
-\tag{B11}
+\qquad\text{(B11)}
 ```
 
 The second line uses Lemma B3 and $`\sum_xq_x\le p`$. Equations (B10)–(B11) prove (B9).
@@ -415,7 +415,7 @@ At the endpoint $`\alpha=2`$, Lemma B3 already says $`\sum_x\sqrt{q_x}\le1`$, so
 
 ```math
 p\le d^{\,1-\alpha}.
-\tag{B12}
+\qquad\text{(B12)}
 ```
 
 Indeed, $`q_x=p/d`$ for every $`x`$, and (B6) gives $`d(p/d)^{1/\alpha}\le1`$. This statement does not require $`\alpha\ge2`$.
