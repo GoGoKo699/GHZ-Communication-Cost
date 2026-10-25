@@ -1,0 +1,44 @@
+# GHZ Communication Cost
+
+This repository studies the classical communication needed to prepare GHZ states from independent bipartite quantum sources of arbitrary finite dimension. Shared classical randomness is free; subsequent quantum communication and free multipartite quantum sources are outside the model.
+
+## Entry points
+
+- README.md: scientific question, principal results, reader routes, scope, reproduction command and contact.
+- science/README.md: connected account of the mechanism and the distinction between fixed, mean and heralded communication.
+- science/model.md: authoritative definitions of sources, outputs, helpers, transcripts, costs, fidelity and the graph parameter.
+- science/branch-bound.md: authoritative proof of quantum Finner in the required setting, fixed-transcript factorization and probability-sensitive branch estimates.
+- science/communication-converses.md: finite-transcript and worst-case bit converses, helper networks and collective global-fidelity strong converse.
+- science/expected-and-heralded.md: exact transcript entropy, approximate mean-cost bounds, matching asymptotic mean frontier on a retained-hub star, and heralding.
+- science/achievability-and-limits.md: star fusion, sequential tree growth, exact tree and discarded-hub entropy converses, counterexamples and unresolved dense-graph coefficient.
+- references/related-work.md: primary-source comparison and attribution; stable anchors correspond to references/references.bib.
+- verification/README.md: finite-check coverage, execution and limits.
+- verification/check_science.py: standard-library reproduction script.
+- verification/results.json: recorded output of the documented checks.
+
+## Scientific distinctions to preserve
+
+Fidelity is squared overlap with a specified pure target. For a block of copies it is global block fidelity, not an average of marginal fidelities.
+
+A fixed shared seed and complete transcript produce an unnormalized branch. Its trace is its probability. Never apply a deterministic LOSR theorem directly to its normalized postselected output.
+
+The graph parameter is the fractional independence number of the output-induced graph. Helpers have zero weight. The dimension-dependent approximate bound needs alpha at least two; the qubit coherence bound and exact-branch probability statement have different domains.
+
+A maximum budget of c binary bits implies at most 2^c complete transcripts. An arbitrary M-leaf interactive tree need not have depth ceil(log2 M). Timing, routing, speaker identity, silence and termination carry no free information.
+
+The general converse allows one-bit broadcast. It also lower-bounds total point-to-point bits. Sequential tree growth attains its qubit cost using one direct correction message to each newly added party.
+
+Exact preparation costs k(n-2) bits on a tree with all vertices as outputs. On a star whose separate helper hub is discarded, N output leaves instead cost Nk bits, with a matching hub-outbound converse. State which parties are outputs.
+
+The fixed-budget collective exponent is alpha-1. It matches the retained-hub star's n-2 rate. The exact entropy result on all trees does not establish that stronger approximate exponent for every tree.
+
+Mean cost permits randomized abort. At fixed global fidelity f on a retained-hub star, the asymptotic optimum is f(n-2) bits per copy. Do not transfer the worst-case strong converse unchanged to mean cost.
+
+The complete-graph exact coefficient remains between n/2-1 and n-2 before integer rounding. No exact universal quantum n-2 law is established.
+
+Quantum Finner, classical PIN packing laws, elementary fusion, and data processing are inherited ingredients. Preserve the primary-source attribution and the stated full-text access limit in the related-work account.
+
+## Reproduction route
+
+Run python3 verification/check_science.py from the repository root. Read verification/README.md before interpreting its output. The finite state-vector and exact-arithmetic checks validate explicit constructions and examples; analytical proofs establish the arbitrary-dimension converses.
+
