@@ -1,0 +1,287 @@
+{
+  "check_count": 16,
+  "checks": [
+    {
+      "arithmetic": "exact rational density matrices",
+      "each_branch_probability": "1",
+      "global_fidelity": "1",
+      "local_dimension": 2,
+      "name": "star_n2_d2",
+      "outputs": 2,
+      "source_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "syndrome_symbols": 0,
+      "transcripts": 1
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "each_branch_probability": "1/4",
+      "global_fidelity": "1",
+      "local_dimension": 2,
+      "name": "star_n4_d2",
+      "outputs": 4,
+      "source_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "syndrome_symbols": 2,
+      "transcripts": 4
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "each_branch_probability": "1/9",
+      "global_fidelity": "1",
+      "local_dimension": 3,
+      "name": "star_n4_d3",
+      "outputs": 4,
+      "source_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "syndrome_symbols": 2,
+      "transcripts": 9
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "each_branch_probability": "1/8",
+      "global_fidelity": "1",
+      "local_dimension": 2,
+      "name": "star_n5_d2",
+      "outputs": 5,
+      "source_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "syndrome_symbols": 3,
+      "transcripts": 8
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "each_branch_probability": "1/8",
+      "global_fidelity": "1",
+      "local_dimension": 2,
+      "name": "path_n5_d2",
+      "outputs": 5,
+      "source_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "syndrome_symbols": 3,
+      "transcripts": 8
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "each_branch_probability": "1/9",
+      "global_fidelity": "1",
+      "local_dimension": 3,
+      "name": "path_n4_d3",
+      "outputs": 4,
+      "source_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "syndrome_symbols": 2,
+      "transcripts": 9
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "each_branch_probability": "1/16",
+      "global_fidelity": "1",
+      "local_dimension": 2,
+      "name": "branched_tree_n6_d2",
+      "outputs": 6,
+      "source_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "syndrome_symbols": 4,
+      "transcripts": 16
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "communicated_transcripts": 1,
+      "fine_local_histories": 27,
+      "global_fidelity": "1/27",
+      "local_dimension": 3,
+      "name": "private_star_syndromes_known_0",
+      "outputs": 5
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "communicated_transcripts": 3,
+      "fine_local_histories": 27,
+      "global_fidelity": "1/9",
+      "local_dimension": 3,
+      "name": "private_star_syndromes_known_1",
+      "outputs": 5
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "communicated_transcripts": 9,
+      "fine_local_histories": 27,
+      "global_fidelity": "1/3",
+      "local_dimension": 3,
+      "name": "private_star_syndromes_known_2",
+      "outputs": 5
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "communicated_transcripts": 27,
+      "fine_local_histories": 27,
+      "global_fidelity": "1",
+      "local_dimension": 3,
+      "name": "private_star_syndromes_known_3",
+      "outputs": 5
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "communicated_transcripts": 2,
+      "conditional_success_fidelity": "1",
+      "fine_local_histories": 8,
+      "name": "one_bit_coarse_success_flag",
+      "private_histories_in_failure_map": 7,
+      "success_probability": "1/8",
+      "unconditional_fidelity": "9/16"
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "fidelity_if_phase_is_unreported": "1/2",
+      "global_fidelity": "1",
+      "name": "discarded_hub_2_leaves",
+      "output_leaves": 2,
+      "phase_bits": 1,
+      "source_edges": 2,
+      "syndrome_bits": 1,
+      "transcripts": 4
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "fidelity_if_phase_is_unreported": "1/2",
+      "global_fidelity": "1",
+      "name": "discarded_hub_3_leaves",
+      "output_leaves": 3,
+      "phase_bits": 1,
+      "source_edges": 3,
+      "syndrome_bits": 2,
+      "transcripts": 8
+    },
+    {
+      "arithmetic": "exact rational density matrices",
+      "exact_run_probability": "1/4",
+      "expected_bits": "1",
+      "global_fidelity": "7/16",
+      "name": "shared_seed_randomized_abort",
+      "outputs": 4,
+      "qubit_ghz_copies": 2,
+      "worst_case_bits": 4
+    },
+    {
+      "arithmetic": "binary-exact complex entries; scalar diagnostic tolerance 1e-14",
+      "correct_squared_norms": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "event_probability": 0.0625,
+      "finner_bound": 0.125,
+      "incorrect_plain_square_norms": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "local_effects": "projectors onto (|00>+phase|11>)/sqrt(2), phases i,-i,1",
+      "local_event_probabilities": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "name": "complex_triangle_event_finner",
+      "plain_square_rhs_would_incorrectly_be_zero": true,
+      "source": "three independent Bell pairs"
+    }
+  ],
+  "python_version": "3.12.14",
+  "schema_version": 1,
+  "scope": "Finite physical register-map checks and a complex-event diagnostic. They do not prove the arbitrary-dimension Finner inequality, the transcript factorization theorem, or the entropy converses.",
+  "status": "passed"
+}
