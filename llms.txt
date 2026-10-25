@@ -5,6 +5,9 @@ This repository studies the classical communication needed to prepare GHZ states
 ## Entry points
 
 - README.md: scientific question, principal results, reader routes, scope, reproduction command and contact.
+- learning/README.md: entry point for self-directed learning and alternative reading routes.
+- learning/bridge.md: the single Watrous anchor, precise section pointers, notation translation, one-bit fusion, and the missing network and entropy steps.
+- learning/milestones.md: exactly 30 learner-independent targets, M01–M12 background/preliminaries and M13–M30 narrative/innovation; dependencies, conceptual connections and canonical source pointers.
 - science/README.md: connected account of the mechanism and the distinction between fixed, mean and heralded communication.
 - science/model.md: authoritative definitions of sources, outputs, helpers, transcripts, costs, fidelity and the graph parameter.
 - science/branch-bound.md: authoritative proof of quantum Finner in the required setting, fixed-transcript factorization and probability-sensitive branch estimates.
@@ -15,6 +18,12 @@ This repository studies the classical communication needed to prepare GHZ states
 - verification/README.md: finite-check coverage, execution and limits.
 - verification/check_science.py: standard-library reproduction script.
 - verification/results.json: recorded output of the documented checks.
+
+## Learning route
+
+Use John Watrous, The Theory of Quantum Information (Cambridge University Press, 2018), as the sole educational anchor. Refer to the official author manuscript sections mapped in learning/bridge.md. Preserve the distinction between the book foundations and the project-specific independent-source, graph-packing, Finner, transcript and message-entropy arguments. The book uses root fidelity; the project uses squared overlap with a pure target. Its LOCC discussion is finite and bipartite, while the project defines its own multipartite and variable-length model.
+
+For the full conceptual story, use the settled 30-milestone map. For exact claims and complete proofs, follow the canonical science pages. Primary research references support attribution and proof dependencies.
 
 ## Scientific distinctions to preserve
 

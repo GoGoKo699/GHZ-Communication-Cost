@@ -85,7 +85,7 @@ Their graph-dependent preparation bounds and resource measures therefore answer 
 
 **Key:** `chan2018` retains the preprint year. Chung Chan et al., *Upper Bounds via Lamination on the Constrained Secrecy Capacity of Hypergraphical Sources*, IEEE Transactions on Information Theory **65**(8), 5080–5093 (2019). [DOI](https://doi.org/10.1109/TIT.2019.2897129); [2018 author preprint](https://arxiv.org/abs/1805.01115v1).
 
-**Precise pointers:** Theorem 4.3 is the vertex-packing bound $`(\tau-1)C_S(R)\leq R`$. Theorem 4.1 is the edge-partition bound. For a pairwise independent network (PIN), Theorem 4.2 gives the stronger, exact law
+**Precise pointers:** Theorem 4.3 is the vertex-packing bound $`(\tau-1)C_S(R)\leq R`$. Theorem 4.1 is the edge-partition bound. For a pairwise independent network (PIN) with $`n\geq3`$ parties, Theorem 4.2 gives the stronger, exact law
 
 ```math
 C_S(R)=\min\{R/(n-2),C_S(\infty)\}.
@@ -163,10 +163,21 @@ This is a general multipartite-source example, not a counterexample within the i
 
 **Precise pointers:** Sections 2 and 3. The resources are fixed maximally entangled GHZ states on hyperedges; the proposed decoding uses local unitaries and no communication. For a regular network with $`M`$ sources and $`m`$ incident sources per node, their construction concerns target local dimension $`D=d^m`$, where $`d`$ is the dimension of each source share. Its fidelity is $`d^{m-M}`$, and the stated optimality is within the local-unitary strategy class on these resources.
 
-The source dimension $`d`$ must therefore not be identified with the present target dimension. This construction involves multipartite sources and a restricted decoder class; it does not give a finite-communication converse for arbitrary bipartite sources.
+The source dimension $`d`$ must therefore not be identified with the present target dimension. This construction allows multipartite sources and uses a restricted decoder class; it does not give a finite-communication converse for arbitrary bipartite sources.
 
 ## Attribution boundary and remaining comparison
 
 The graph-weighted network inequality is inherited from Finner and its quantum-network extension. The vertex-packing communication coefficient has an explicit classical predecessor. Zero-communication GHZ fidelity restrictions, small fusion primitives, and numerous Bell-network preparation algorithms are also established ingredients.
 
 The statements proved in this repository combine those ingredients with a fixed-transcript quantum-operation argument to obtain an unconditional fidelity bound under a stated communication budget. The source class, finite-error regime, and charged currency are essential parts of that statement. The result does not establish a universal exact $`n-2`$ cost for quantum networks on every graph, nor does it identify every finite-round or yield bound as a bit bound. The unverified full-text comparison above is a remaining limitation on comprehensive priority claims.
+
+## Educational anchor
+
+<a id="watrous2018"></a>
+### Watrous: the mathematical route into the project
+
+**Key:** `watrous2018`. John Watrous, *The Theory of Quantum Information*, Cambridge University Press (2018). [Publisher and DOI](https://doi.org/10.1017/9781316848142); [official author page and manuscript chapters](https://jhwatrous.github.io/books-and-courses.html).
+
+This book is the sole educational anchor. It supports the [learning bridge](../learning/bridge.md); the research antecedents above retain their separate attribution. Relevant portions are §1.1 for operator preliminaries, §§2.1–2.3 for states and instruments, §3.2 for fidelity, §§5.1–5.2 for entropy, and §6.1.2 for LOCC. Particularly useful pointers are Eqs. (2.258)–(2.262), Definition 3.11 and Proposition 3.13, Theorem 5.35, and Definition 6.25.
+
+Watrous uses root fidelity; with a pure target the project's squared overlap is $`F_{\mathrm{project}}=F_{\mathrm{Watrous}}^2`$. His LOCC definition concerns finite compositions between two parties. The multipartite protocol tree, charged messages, independent-source restriction, and network converse are developed in this repository. The publicly linked chapter PDFs are the author's manuscript version, and section and theorem numbers identify the reading locations.

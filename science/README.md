@@ -4,6 +4,8 @@ Independent bipartite entanglement provides nonlocal quantum resources, but it d
 
 This account permits arbitrarily large pair resources and arbitrary coherent local processing. Its lower bounds therefore concern coordination after resource distribution. The starting assumptions, the charged communication model, and the fidelity convention are all part of the result.
 
+For a foundation-first route, the [Watrous bridge](../learning/bridge.md) translates the relevant textbook conventions and works through one-bit fusion. The [30-milestone map](../learning/milestones.md) follows the same scientific dependencies.
+
 ## The connected argument
 
 Read the pages in the following order for the full derivation.
