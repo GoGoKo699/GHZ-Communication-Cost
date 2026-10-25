@@ -49,6 +49,7 @@ The exact tree and discarded-hub benchmarks use a second argument. Conditional t
 
 | Goal | Start here |
 |---|---|
+| Learn the project through the selected Watrous anchor | [Learning overview](learning/README.md), [source bridge](learning/bridge.md), and [30 milestones](learning/milestones.md) |
 | Follow the complete scientific argument | [Scientific overview](science/README.md) |
 | Check the resource assumptions and conventions | [Model and charged resources](science/model.md) |
 | Inspect the central inequality and transcript factorization | [Branch bound](science/branch-bound.md) |
@@ -57,6 +58,12 @@ The exact tree and discarded-hub benchmarks use a second argument. Conditional t
 | Inspect physical protocols and exact special cases | [Constructions and limits](science/achievability-and-limits.md) |
 | Identify inherited results and the closest comparisons | [Related work](references/related-work.md) and [bibliography](references/references.bib) |
 | Reproduce finite construction checks | [Verification guide](verification/README.md) |
+
+## Learning route
+
+The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**. The [bridge](learning/bridge.md) gives targeted book sections, translates the root-fidelity convention, and develops a complete one-bit fusion example before connecting instruments and entropy to the network bounds.
+
+The [shared map of 30 milestones](learning/milestones.md) has 12 background/preliminaries milestones and 18 narrative/innovation milestones. Each phase moves from local objects and mechanisms to the complete preparation problem. The [learning overview](learning/README.md) offers direct routes for foundations, the main converse, exact benchmarks, and reproduction.
 
 ## Scope and interpretation
 
