@@ -4,6 +4,8 @@ How much classical communication is needed to turn independent pairwise quantum 
 
 The amount of pairwise entanglement is unrestricted. Each source may have arbitrary finite dimension, local processing may be coherent and adaptive, and shared classical randomness is free. Nevertheless, preparing a qubit GHZ state at fixed fidelity above one half requires a number of classical bits proportional to the number of output parties. The same obstruction gives an exponential loss of global fidelity when many GHZ states are prepared below a graph-dependent communication rate.
 
+The [Quantum Star GHZ Heralding](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding) sister project studies the same exact leaf target when each star link is a fixed partially entangled qubit pair. The [shared comparison](science/expected-and-heralded.md#fixed-links-on-a-quantum-star) separates the success achievable with those links from the number of messages needed to identify a successful correction.
+
 ## Principal results
 
 Let $`G`$ be the graph of independent bipartite sources, $`O`$ its $`n`$ designated output parties, and $`\alpha=\alpha^*(G[O])`$ the fractional independence number of the output-induced graph. Helper laboratories have weight zero. Fidelity is the squared overlap with the specified pure GHZ target, averaged over every execution.
@@ -34,6 +36,7 @@ This applies even when every pair of outputs shares an arbitrarily large resourc
 | Star with its hub retained, fixed global fidelity $`f>0`$ | Optimal asymptotic mean cost per copy $`(n-2)f`$ | [Mean-cost frontier](science/expected-and-heralded.md#a-matching-mean-cost-frontier-on-a-star) |
 | $`N`$ leaves with a separate discarded hub, exact output | Optimal cost $`Nk`$ bits; the hub alone must send at least this many on average | [Discarded-hub theorem](science/achievability-and-limits.md#a-hub-that-is-discarded-changes-the-task) |
 | Heralded $`d`$-level output, $`\alpha\ge2`$ | $`P(dF_{\rm acc})^{\alpha-1}\le M_{\rm acc}`$ | [Success–fidelity tradeoff](science/expected-and-heralded.md#heralded-preparation) |
+| Exact heralded $`d`$-level output at $`N`$ laboratories with no direct source edges between outputs | $`P\le M_{\rm acc}/d^N`$, with a matching bit budget on a Bell-qudit star | [Exact success bound](science/expected-and-heralded.md#exact-heralding-without-sources-between-outputs) |
 
 Here $`P`$ is the acceptance probability and $`M_{\rm acc}`$ counts accepted complete transcripts. In the exact-cost rows, $`k`$ qubit copies are locally equivalent to one $`d=2^k`$ target.
 

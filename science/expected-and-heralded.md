@@ -217,7 +217,7 @@ These are success-probability bounds for an explicit collection of complete tran
 
 ### Star saturation and the price of postselection
 
-The [star fusion construction](achievability-and-limits.md) has $`d^{n-2}`$ equiprobable correction words. Choose a subset of $`M_{\mathrm{acc}}`$ words. The hub announces failure for the other outcomes; on acceptance it communicates the word's index, allowing every affected leaf to apply its correction.
+The [retained-hub star fusion construction](achievability-and-limits.md#star-fusion-with-the-hub-retained-as-an-output) has $`d^{n-2}`$ equiprobable correction words. Choose a subset of $`M_{\mathrm{acc}}`$ words. The hub announces failure for the other outcomes; on acceptance it communicates the word's index, allowing every affected leaf to apply its correction.
 
 This protocol has exactly $`M_{\mathrm{acc}}`$ accepted transcripts,
 
@@ -230,6 +230,64 @@ and saturates (E10), since $`\alpha=n-1`$. If the subset is proper, a flag follo
 
 In particular, accepting just the all-zero correction word needs only a single announced success/failure bit, but succeeds with probability $`d^{-(n-2)}`$. The exponentially small probability is the resource consequence that disappears if postselection is left uncharged.
 
+### Exact heralding without sources between outputs
+
+Suppose the $`N\ge2$` output laboratories have no direct source edges between them. The network may contain any number of helper laboratories, arbitrary independent bipartite sources on the allowed edges, and interactive LOCC. For a publicly heralded exact $`d$`-level GHZ state, the stronger bound is
+
+```math
+P\le\min\{1,M_{\rm acc}/d^N\}.
+\qquad\text{(E12)}
+```
+
+Equation (E12) specializes to $`P\le M_{\rm acc}/2^N$` for qubits. Equation (E10) applies under its original $`\alpha\ge2`$ condition, including imperfect accepted fidelity and direct source edges between outputs.
+
+**Proof.** Fix a shared seed and one complete public transcript. Use the [product of local branch maps](branch-bound.md#factorization-of-a-fixed-transcript) and let $`\Lambda_i`$ be the output-laboratory map, including the local trace over systems other than its designated output. The maps include all unannounced local histories compatible with the prescribed transcript. Let $`E`$ be the effect for the product of the helper maps after discarding their registers. Trace nonincrease gives $`0\preceq E\preceq I`$. On the initial state $`\rho`$ for this seed, write $`H`$ for the collection of helper registers. Before applying the local output maps, the operator on the output laboratories is
+
+```math
+B=\operatorname{Tr}_{H}\!\left[(I\otimes E^{1/2})\rho
+                      (I\otimes E^{1/2})\right]
+\preceq \operatorname{Tr}_H\rho=\bigotimes_{i=1}^{N}\rho_i .
+```
+
+The operator difference is the analogous positive operator for $`I-E$`. The output marginal factors because no independent source supplies systems to two outputs. Applying the product of the local output maps gives
+
+```math
+\sigma\preceq A=\bigotimes_{i=1}^{N} A_i,
+\qquad A_i=\Lambda_i(\rho_i),\qquad
+A_i\succeq0,\quad\operatorname{Tr}A_i\le1 .
+```
+
+For an exact accepted branch of positive probability $`p$`, write $`\sigma=p|G\rangle\langle G|$` for the prescribed GHZ target $`|G\rangle$`. Each marginal of $`|G\rangle$` is $`I/d$`, so every $`A_i$` must have full support on its $`d$`-dimensional output. Conjugating the rank-one operator by $`A^{-1/2}$` gives $`p\langle G|A^{-1}|G\rangle\le1$`. Scalar Jensen's inequality for the logarithm of the eigenvalues of $`A^{-1}$` gives
+
+```math
+p
+\le \frac1{\langle G|A^{-1}|G\rangle}
+\le 2^{\langle G|\log_2 A|G\rangle}
+=\prod_{i=1}^{N}(\det A_i)^{1/d}
+\le d^{-N}.
+```
+
+The equality uses the tensor product for $`A$` and the maximally mixed GHZ marginals. The final step is the arithmetic–geometric mean inequality for the eigenvalues of each $`A_i$`. Exact fidelity of the accepted output implies target fidelity one in each positive-probability accepted transcript for almost every seed. Summing and then averaging over the seed proves (E12). ∎
+
+**Bell-qudit star.** A separate hub holding one maximally entangled qudit pair per output can use the [discarded-hub construction](achievability-and-limits.md#a-hub-that-is-discarded-changes-the-task). Equivalently, the hub reads the orthonormal GHZ basis and announces the $`N-1$` relative shifts and one phase label that the leaves correct. Its maximally mixed input gives $`d^N$` equiprobable words. Selecting $`M_{\rm acc}$` such words and grouping all remaining outcomes into a failure word attains (E12) whenever $`M_{\rm acc}\le d^N$`. [Caprara Vivoli et al.](../references/related-work.md#capraravivoli2019) give the binary-herald Bell-qubit benchmark, and [Chen et al.](../references/related-work.md#chen2024) give the deterministic Bell-qubit construction and cost.
+
+For an integer worst-case broadcast budget $`c\ge0$`, the following bound holds in every network with no direct source edges between outputs, and a Bell-qudit star attains it:
+
+```math
+P_{\rm Bell\ star}(c)=
+\begin{cases}
+(2^c-1)/d^N,&2^c<d^N,\\
+1,&2^c\ge d^N .
+\end{cases}
+\qquad\text{(E13)}
+```
+
+Below the threshold, (E12) rules out deterministic success for every seed. At least one of the $`2^c$` complete binary words must then carry failure. The hub uses one common failure word and reserves the rest for accepted words. At or above the threshold, it assigns a distinct word to each GHZ-basis outcome and accepts every outcome. Separate physical delivery costs can depend on who needs each bit. Equation (E13) counts broadcast bits in the [stated model](model.md#broadcast-convention-and-other-delivery-models).
+
+### Fixed links on a quantum star
+
+[Quantum Star GHZ Heralding](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding) studies the [one-way model with one calibrated pure qubit pair per leaf](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding/blob/e5eb9af0dcdd2f7411e6a5b4eb6c6aec73ef19a3/science/MODEL.md). Its source-sensitive bounds use the actual Schmidt weights and one correction per accepted label. For three identical links with smaller Schmidt probability $`q=2/5$`, the maximum heralding probability is $`0.800$`, and [reaching it in this model requires four worst-case broadcast bits](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding/blob/main/science/COMMUNICATION.md#bits-needed-to-reach-the-unconstrained-optimum). That count includes the failure label. The general theorem above controls exact accepted transcripts even with arbitrary source dimensions and interaction. The calibrated-star analysis determines how specific resources constrain the probabilities and number of messages needed.
+
 ## Which conclusion applies?
 
 | Task | Supported conclusion |
@@ -239,6 +297,7 @@ In particular, accepting just the all-zero correction word needs only a single a
 | Approximate $`d`$-level output, $`\alpha\ge2`$, mean communication | Entropy bound (E6) |
 | Star, fixed global fidelity, $`k`$ collective qubit targets | Exact mean-cost rate $`(n-2)f`$ |
 | A specified accepted set of transcripts | Success–fidelity bounds (E10) and (E11) |
+| Exact accepted outputs with no direct source edges between them | Per-transcript bound (E12), with the Bell-qudit star attaining the worst-case bit frontier (E13) |
 | Fixed worst-case budget for a whole block | [Collective strong converse](communication-converses.md) |
 
 The full comparison with classical PIN communication and other quantum network resource measures is in [related work](../references/related-work.md).
