@@ -162,9 +162,17 @@ The statement holds after averaging over a free shared seed when the leaf bound 
 
 For $`k`$ qubit GHZ copies, grouping each party's qubits into a register sets $`d=2^k`$. This yields the [collective global-fidelity converse](../science/communication-converses.md#collective-preparation-of-many-ghz-states). It concerns overlap with the entire target block. High fidelity of the separate marginals alone is insufficient.
 
+## Product marginals and exact heralding
+
+Use the instrument and LOCC readings above to fix a complete transcript. Before the local output maps act, tracing out the helpers gives the ordinary reduced state of the output laboratories. Selecting the helper effect for that transcript gives a positive operator bounded above by this reduced state. With no direct source edge between outputs, the reduced state is a product. The local output maps preserve the operator inequality and the product structure of its upper bound.
+
+An exact accepted branch is a positive multiple of a single GHZ projector. Its local marginals are maximally mixed, which bounds its probability by $`d^{-N}`$ for $`N`$ output laboratories. Follow the [operator argument](../science/expected-and-heralded.md#exact-heralding-without-sources-between-outputs) to see where this exactness condition enters.
+
+On a discarded-hub Bell star with three output qubits, there are eight equally likely correction words. Two broadcast bits can label four complete messages. Reserve one for failure, and the remaining three words give exact success probability $`3/8`$. Three bits carry all eight words and give deterministic success. The [fixed-link comparison](../science/expected-and-heralded.md#fixed-links-on-a-quantum-star) shows how a different source changes the optimum even on the same star.
+
 ## Exact costs through entropy
 
-Watrous's relative-entropy data-processing theorem supplies a second route to exact communication costs. For groups of laboratories $`B_1,\ldots,B_m`$, total correlation is
+Watrous's relative-entropy data-processing theorem supplies a route to exact mean communication costs. For groups of laboratories $`B_1,\ldots,B_m`$, total correlation is
 
 ```math
 J(B_1:\cdots:B_m)
@@ -195,6 +203,7 @@ The proofs include almost-surely terminating protocols of finite mean length. Th
 | Must every execution fit a fixed communication allowance? | Maximum binary length $`c`$ | Use the finite-transcript converse and the collective exponential bound. |
 | Is only the average number of transmitted bits limited? | Mean prefix-free length $`L`$ | Use transcript entropy and cutoff bounds. On a retained-hub star with $`n\ge3`$ outputs, the asymptotic optimum at fixed global fidelity $`f\in(0,1]`$ is $`(n-2)f`$ bits per copy. |
 | Is the output required only after acceptance? | Acceptance probability, accepted transcripts and conditional fidelity | Retain $`P`$ in $`P(dF_{\rm acc})^{\alpha-1}\le M_{\rm acc}`$ for $`\alpha\ge2`$, and charge useful acceptance signaling. |
+| Must every accepted state be exact, with no direct source between outputs? | Accepted complete transcripts and the failure word | Each accepted transcript has probability at most $`d^{-N}`$. The Bell-qudit star attains the [fixed-bit frontier](../science/expected-and-heralded.md#exact-heralding-without-sources-between-outputs). |
 | Is the target exact on a tree? | Outbound communication from each vertex | Conditional total correlation gives the matching $`k(n-2)`$-bit cost for $`d=2^k`$. |
 | Is the source graph dense? | Available source edges and the output set | Extra source edges preserve the general packing converse but invalidate the tree-component independence argument. The exact dense-graph coefficient remains unresolved. |
 

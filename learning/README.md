@@ -13,7 +13,7 @@ The [30-milestone map](milestones.md) is defined by the scientific project and i
 | Background/preliminaries | [M01](milestones.md#m01)–[M12](milestones.md#m12) | Registers and states, instruments and branch probabilities, independent sources, LOCC transcripts, fidelity, packing and entropy, ending with the complete preparation model. |
 | Narrative/innovation | [M13](milestones.md#m13)–[M30](milestones.md#m30) | The branch mechanism and communication converses, matching fusion and entropy benchmarks, mean cost and heralding, attribution and boundaries, ending with the complete resource landscape. |
 
-The longer narrative phase accommodates two converse methods and three distinct communication questions. The map gives central questions, understanding targets, earlier dependencies, conceptual connections and source pointers. Specialist calculations and full proofs remain in the scientific pages.
+The longer narrative phase covers the probability and entropy converses for the fixed-budget, mean-cost and heralded tasks. The map gives central questions, understanding targets, earlier dependencies, conceptual connections and source pointers. Specialist calculations and full proofs remain in the scientific pages.
 
 ## Ways into the account
 
@@ -25,6 +25,7 @@ The longer narrative phase accommodates two converse methods and three distinct 
 | Inspect the exact statements immediately | [Scientific overview](../science/README.md), [operational model](../science/model.md), and [communication converses](../science/communication-converses.md). |
 | Understand why a tree has an exact cost | [Exact costs through entropy](bridge.md#exact-costs-through-entropy), then [the complete entropy proof](../science/achievability-and-limits.md#an-entropy-converse-that-is-exact-on-trees). |
 | Compare fixed budgets, mean cost and selected success | [Choosing the resource question](bridge.md#choosing-the-right-resource-question), then [expected communication and heralding](../science/expected-and-heralded.md). |
+| Find the cost of a useful exact herald | [Product marginals and exact heralding](bridge.md#product-marginals-and-exact-heralding), then [M24](milestones.md#m24). |
 | Reproduce physical examples | [Verification guide](../verification/README.md). |
 
 ## Boundaries to keep visible

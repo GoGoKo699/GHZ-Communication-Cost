@@ -337,13 +337,13 @@ Understand exponential decay of global fidelity below the proved worst-case comm
 
 **Central question:** What does a protocol owe when it promises a good state only on announced successful executions?
 
-**Understanding target:** Distinguish acceptance probability $`P`$, accepted-output fidelity $`F_{\mathrm{acc}}`$, and the per-seed bound $`M_{\mathrm{acc}}`$ on accepted complete transcripts. For $`\alpha\ge2`$, interpret $`P(dF_{\mathrm{acc}})^{\alpha-1}\le M_{\mathrm{acc}}`$. Explain how selecting star correction words saturates this relation, including the single-word success probability.
+**Understanding target:** Distinguish acceptance probability $`P`$, accepted-output fidelity $`F_{\mathrm{acc}}`$, and the per-seed bound $`M_{\mathrm{acc}}`$ on accepted complete transcripts. For $`\alpha\ge2`$, interpret $`P(dF_{\mathrm{acc}})^{\alpha-1}\le M_{\mathrm{acc}}`$. Explain how selecting correction words saturates the relation on a retained-hub star. With no sources between outputs and exact accepted output, explain why the probability cap is instead $`d^{-N}`$ per transcript. Compute the $`3/8`$ success probability for a two-bit Bell-star protocol with three output qubits.
 
 **Dependencies and story role:** M04, M07, M17–M18 and M21. This completes the comparison between unconditional, mean-cost, and heralded tasks.
 
-**Conceptual connection:** A one-bit announced success flag can identify a rare exact outcome without making that outcome deterministic. Acceptance must be available through the specified charged protocol; hidden remote measurement records do not supply a free herald.
+**Conceptual connection:** A one-bit announced success flag can identify a rare exact outcome without making that outcome deterministic. The herald is part of the charged transcript. In the exact Bell-star experiment, reserve a word for failure until enough words are available to accept every correction.
 
-**Source pointers:** [heralded preparation and star saturation, E10–E11](../science/expected-and-heralded.md#heralded-preparation); [private and coarse-grained syndromes](../science/achievability-and-limits.md#private-syndromes-and-uncorrected-outputs).
+**Source pointers:** [general heralded bounds, E10–E11](../science/expected-and-heralded.md#heralded-preparation), [exact no-output-edge bounds, E12–E13](../science/expected-and-heralded.md#exact-heralding-without-sources-between-outputs), and [the learning bridge](bridge.md#product-marginals-and-exact-heralding).
 
 <a id="m25"></a>
 ### M25: How a public message changes total correlation
@@ -352,7 +352,7 @@ Understand exponential decay of global fidelity below the proved worst-case comm
 
 **Understanding target:** Interpret conditional total correlation as the average relative entropy between each joint branch state and the product of its marginals. Explain why a message produced within one group cannot increase it after conditioning on that message, while a message from an outside party can increase it by at most its conditional Shannon entropy.
 
-**Dependencies and story role:** M04–M06 and M11–M12. This begins the second converse mechanism, with a local message-level statement rather than a packing inequality.
+**Dependencies and story role:** M04–M06 and M11–M12. This begins the entropy converse with a bound on what one public message contributes.
 
 **Conceptual connection:** Data processing controls the local instrument; revealing its outcome changes the conditioning record. Distinguishing inside from outside senders exposes which party must supply the information in an exact architecture-specific preparation.
 

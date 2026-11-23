@@ -15,7 +15,7 @@ Read the pages in the following order for the full derivation.
 | [Model and charged resources](model.md) | What is supplied, what is charged, and what is the output? | Independent pair sources, helpers, shared seed, prefix-free transcripts, global fidelity, fractional independence |
 | [A bound for each transcript](branch-bound.md) | What can one communicated branch contribute? | Quantum Finner with attribution, CP-map factorization, diagonal mass, coherence and probability-sensitive fidelity |
 | [Communication volume and global fidelity](communication-converses.md) | How does a finite transcript budget constrain the whole output? | Finite-transcript theorem, worst-case bit bounds, finite helpers, collective strong converse |
-| [Expected communication and heralding](expected-and-heralded.md) | What changes if cost is averaged or success is selected? | Exact transcript entropy, cutoff bound, mean star frontier, accepted-transcript tradeoff |
+| [Expected communication and heralding](expected-and-heralded.md) | What changes if cost is averaged or success is selected? | Exact transcript entropy, cutoff bound, mean star frontier, accepted-transcript tradeoff, exact bound for outputs without direct source edges |
 | [Constructions, exact tree costs, and limits](achievability-and-limits.md) | Which bounds match, and which assumptions matter? | Star fusion, tree growth, conditional-total-correlation converses, discarded hub, counterexamples and dense-graph gap |
 | [Related work](../references/related-work.md) | Which ingredients and neighboring claims were already established? | Primary-source statements, resource currencies, classical antecedents and comparison limits |
 
@@ -60,7 +60,7 @@ A worst-case budget restricts every execution. A mean budget can place a large c
 
 The entropy converse matches this construction to leading order: at fixed required global fidelity $`f>0`$, the optimal mean cost per copy tends to $`(n-2)f`$. The exact worst-case threshold remains $`n-2`$. [The expected-cost page](expected-and-heralded.md) states both finite bounds and the limiting statement.
 
-A heralded task instead asks for a high-quality state only on accepted transcripts. For $`\alpha\ge2`$, its success probability is constrained by $`P(dF_{\rm acc})^{\alpha-1}\le M_{\rm acc}`$. A small announced success flag does not make a rare event deterministic.
+A heralded task instead asks for a high-quality state only on accepted transcripts. For $`\alpha\ge2`$, its success probability is constrained by $`P(dF_{\rm acc})^{\alpha-1}\le M_{\rm acc}`$. A publicly announced flag can single out a rare exact state. If there are no direct source edges between the outputs, their initial joint marginal factors. This gives the [stronger bound on exact heralding](expected-and-heralded.md#exact-heralding-without-sources-between-outputs), which a Bell-qudit star attains with a charged failure code when some outcomes are rejected.
 
 ## Exact benchmarks beyond the packing bound
 

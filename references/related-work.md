@@ -111,6 +111,15 @@ Repeated Bell-pair fusion is therefore an established construction ingredient. A
 
 This is distinct from a star with $`n`$ output parties including its center, where fusion costs $`n-2`$ bits. The separate [discarded-hub argument](../science/achievability-and-limits.md#a-hub-that-is-discarded-changes-the-task) in this repository extends the known benchmark to arbitrary independent hub–leaf resources and interactive LOCC, while specifically charging hub-outbound communication. The coefficient and Bell-input construction are established benchmarks; the enlarged source and operation classes are the relevant distinction.
 
+<a id="capraravivoli2019"></a>
+### Caprara Vivoli, Ribeiro and Wehner: the binary herald
+
+**Key:** `capraravivoli2019`. Valentina Caprara Vivoli, Jérémy Ribeiro, and Stephanie Wehner, *High-fidelity Greenberger-Horne-Zeilinger state generation within nearby nodes*, Physical Review A **100**, 032310 (2019). [DOI](https://doi.org/10.1103/PhysRevA.100.032310).
+
+Section II studies a binary POVM at the center, an exact fixed GHZ target on the remote qubits, and identical pure link states. It analyzes the product of success probability and conditional fidelity. For Bell inputs a single accepted outcome yields an exact GHZ state with probability $`2^{-N}`$. The [exact accepted-transcript result](../science/expected-and-heralded.md#exact-heralding-without-sources-between-outputs) extends that benchmark to multiple accepted public transcripts, arbitrary local dimensions and adaptive processing whenever no bipartite source joins two outputs. It retains the separately encoded failure outcome when deriving a fixed-bit budget.
+
+[Quantum Star GHZ Heralding](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding) gives the [calibrated pure-link model](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding/blob/e5eb9af0dcdd2f7411e6a5b4eb6c6aec73ef19a3/science/MODEL.md) and analyzes the attainable success probability with outcome-dependent local unitary corrections.
+
 ## Other network and distillation results
 
 <a id="spee2024"></a>
