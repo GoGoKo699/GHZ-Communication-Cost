@@ -274,7 +274,7 @@ The equality uses the tensor product for $`A`$ and the maximally mixed GHZ margi
 For an integer worst-case broadcast budget $`c\ge0`$, the following bound holds in every network with no direct source edges between outputs, and a Bell-qudit star attains it:
 
 ```math
-P_{\mathrm{Bell}}(c)=\frac{2^c-1}{d^N},\qquad 2^c<d^N.
+P_{\mathrm{Bell}}(c)=\frac{2^c-1}{d^N},\qquad 2^c\lt d^N.
 \qquad\text{(E13)}
 ```
 
@@ -282,7 +282,7 @@ At or above the threshold $`2^c\ge d^N`$, the optimum is one. Below the threshol
 
 ### Fixed links on a quantum star
 
-[Quantum Star GHZ Heralding](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding) studies the [one-way model with one calibrated pure qubit pair per leaf](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding/blob/e5eb9af0dcdd2f7411e6a5b4eb6c6aec73ef19a3/science/MODEL.md). Its source-sensitive bounds use the actual Schmidt weights and one correction per accepted label. For three identical links with smaller Schmidt probability $`q=2/5$`, the maximum heralding probability is $`0.800$`, and [reaching it in this model requires four worst-case broadcast bits](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding/blob/11363f22a603ce1f5b52fd68da16d5bef1253ac4/science/COMMUNICATION.md#bits-needed-to-reach-the-unconstrained-optimum). That count includes the failure label. The general theorem above controls exact accepted transcripts even with arbitrary source dimensions and interaction. The calibrated-star analysis determines how specific resources constrain the probabilities and number of messages needed.
+[Quantum Star GHZ Heralding](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding) studies the [one-way model with one calibrated pure qubit pair per leaf](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding/blob/e5eb9af0dcdd2f7411e6a5b4eb6c6aec73ef19a3/science/MODEL.md). Its source-sensitive bounds use the actual Schmidt weights and one correction per accepted label. For three identical links with smaller Schmidt probability $`q=2/5`$, the maximum heralding probability is $`0.800`$, and [reaching it in this model requires four worst-case broadcast bits](https://github.com/GoGoKo699/Quantum-Star-GHZ-Heralding/blob/11363f22a603ce1f5b52fd68da16d5bef1253ac4/science/COMMUNICATION.md#bits-needed-to-reach-the-unconstrained-optimum). That count includes the failure label. The general theorem above controls exact accepted transcripts even with arbitrary source dimensions and interaction. The calibrated-star analysis determines how specific resources constrain the probabilities and number of messages needed.
 
 ## Which conclusion applies?
 
