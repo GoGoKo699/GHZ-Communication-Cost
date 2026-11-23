@@ -244,9 +244,9 @@ Equation (E12) specializes to $`P\le M_{\rm acc}/2^N$` for qubits. Equation (E10
 **Proof.** Fix a shared seed and one complete public transcript. Use the [product of local branch maps](branch-bound.md#factorization-of-a-fixed-transcript) and let $`\Lambda_i`$ be the output-laboratory map, including the local trace over systems other than its designated output. The maps include all unannounced local histories compatible with the prescribed transcript. Let $`E`$ be the effect for the product of the helper maps after discarding their registers. Trace nonincrease gives $`0\preceq E\preceq I`$. On the initial state $`\rho`$ for this seed, write $`H`$ for the collection of helper registers. Before applying the local output maps, the operator on the output laboratories is
 
 ```math
-B=\operatorname{Tr}_{H}\!\left[(I\otimes E^{1/2})\rho
+B=\mathrm{Tr}_{H}\!\left[(I\otimes E^{1/2})\rho
                       (I\otimes E^{1/2})\right]
-\preceq \operatorname{Tr}_H\rho=\bigotimes_{i=1}^{N}\rho_i .
+\preceq \mathrm{Tr}_H\rho=\bigotimes_{i=1}^{N}\rho_i .
 ```
 
 The operator difference is the analogous positive operator for $`I-E$`. The output marginal factors because no independent source supplies systems to two outputs. Applying the product of the local output maps gives
@@ -254,7 +254,7 @@ The operator difference is the analogous positive operator for $`I-E$`. The outp
 ```math
 \sigma\preceq A=\bigotimes_{i=1}^{N} A_i,
 \qquad A_i=\Lambda_i(\rho_i),\qquad
-A_i\succeq0,\quad\operatorname{Tr}A_i\le1 .
+A_i\succeq0,\quad\mathrm{Tr}A_i\le1 .
 ```
 
 For an exact accepted branch of positive probability $`p$`, write $`\sigma=p|G\rangle\langle G|$` for the prescribed GHZ target $`|G\rangle$`. Each marginal of $`|G\rangle$` is $`I/d$`, so every $`A_i$` must have full support on its $`d$`-dimensional output. Conjugating the rank-one operator by $`A^{-1/2}$` gives $`p\langle G|A^{-1}|G\rangle\le1$`. Scalar Jensen's inequality for the logarithm of the eigenvalues of $`A^{-1}$` gives
@@ -274,15 +274,11 @@ The equality uses the tensor product for $`A$` and the maximally mixed GHZ margi
 For an integer worst-case broadcast budget $`c\ge0$`, the following bound holds in every network with no direct source edges between outputs, and a Bell-qudit star attains it:
 
 ```math
-P_{\rm Bell\ star}(c)=
-\begin{cases}
-(2^c-1)/d^N,&2^c<d^N,\\
-1,&2^c\ge d^N .
-\end{cases}
+P_{\mathrm{Bell}}(c)=\frac{2^c-1}{d^N},\qquad 2^c<d^N.
 \qquad\text{(E13)}
 ```
 
-Below the threshold, (E12) rules out deterministic success for every seed. At least one of the $`2^c$` complete binary words must then carry failure. The hub uses one common failure word and reserves the rest for accepted words. At or above the threshold, it assigns a distinct word to each GHZ-basis outcome and accepts every outcome. Separate physical delivery costs can depend on who needs each bit. Equation (E13) counts broadcast bits in the [stated model](model.md#broadcast-convention-and-other-delivery-models).
+At or above the threshold $`2^c\ge d^N`$, the optimum is one. Below the threshold, (E12) rules out deterministic success for every seed. At least one of the $`2^c$` complete binary words must then carry failure. The hub uses one common failure word and reserves the rest for accepted words. At or above the threshold, it assigns a distinct word to each GHZ-basis outcome and accepts every outcome. Separate physical delivery costs can depend on who needs each bit. Equation (E13) counts broadcast bits in the [stated model](model.md#broadcast-convention-and-other-delivery-models).
 
 ### Fixed links on a quantum star
 
